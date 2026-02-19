@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700", "900"],
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-roboto",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Easylab AI × Datacenter Luxembourg — Solutions IA sur mesure",
+  title: "Datacenter Luxembourg — Solutions IA",
   description:
-    "Deux solutions IA exclusives pour Datacenter Luxembourg : Natural Language Infrastructure Provisioning et AI Network Security Monitor. Par Easylab AI.",
+    "Provisioning IA et sécurité réseau intelligente pour votre infrastructure",
   keywords:
-    "datacenter luxembourg, IA, intelligence artificielle, infrastructure, sécurité réseau, NIS2, easylab",
-  authors: [{ name: "Easylab AI" }],
+    "datacenter luxembourg, IA, intelligence artificielle, infrastructure, sécurité réseau, NIS2, provisioning",
+  authors: [{ name: "Datacenter Luxembourg" }],
   openGraph: {
-    title: "Easylab AI × Datacenter Luxembourg",
+    title: "Datacenter Luxembourg — Solutions IA",
     description:
-      "L'intelligence artificielle au cœur de votre infrastructure datacenter.",
+      "Provisioning IA et sécurité réseau intelligente pour votre infrastructure",
     type: "website",
   },
 };
@@ -30,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={roboto.variable}>
-      <body className={`${roboto.className} antialiased`}>{children}</body>
+    <html lang="fr" className={inter.variable}>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
